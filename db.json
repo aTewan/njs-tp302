@@ -69,5 +69,13 @@
       }
     }
   ],
-  "photos": []
+  "photos": [
+    {
+      "albumId": 1,
+      "id": 1,
+      "title": "trol",
+      "url": "lll",
+      "thumbnailUrl": "fgljdf"
+    }
+  ]
 }

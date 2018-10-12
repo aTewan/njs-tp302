@@ -21,7 +21,11 @@ export class Photo implements PhotoSchema {
   }
 
   static async create(photo : Photo) {
-    await api.post<Photo>('photos/',{photo})
+    await api.post<Photo>('photos/',photo)
+  }
+
+  static async updateById(id: number, changes: object) {
+    await api.patch<Photo>(`photos/${id}`, changes)
   }
 
   static async deleteById(photoId: number) {

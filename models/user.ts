@@ -42,6 +42,10 @@ export class User implements UserSchema{
     await api.post<User>('users/', user)
   }
 
+  static async updateById(id: number, changes: object) {
+    await api.patch<User>(`users/${id}`, changes)
+  }
+
   static async deleteById(userId: number) {
     await api.delete(`users/${userId}`)
   }

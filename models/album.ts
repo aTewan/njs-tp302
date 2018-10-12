@@ -43,7 +43,11 @@ export class Album implements AlbumSchema {
   }
 
   static async create(album: Album) {
-    await api.post<AlbumSchema>('albums/',{album})
+    await api.post<AlbumSchema>('albums/',album)
+  }
+
+  static async updateById(id: number, changes: object) {
+    await api.patch<Album>(`albums/${id}`, changes)
   }
 
   static async deleteById(albumId: number) {

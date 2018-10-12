@@ -4,6 +4,7 @@ import User from './models/user'
 import axios from 'axios'
 
 import jsonServer = require('json-server');
+import { Photo } from './models/photo';
 const server = jsonServer.create()
 const router = jsonServer.router('db.json')
 const middlewares = jsonServer.defaults()
@@ -20,7 +21,8 @@ async function run() {
       company: { name: "aCorporate", catchPhrase: "on est pas corporate nous ???", bs: "bs?" }})
   await User.create(user)*/
   //let album = new Album({userId:2, id:2, title:"Titi"})
-  console.log(await Album.findByFilter({title:'titi'}))
+  //let photo = new Photo({albumId:1, id:1,title: "lalala", url: "lll", thumbnailUrl: "fgljdf"}); await Photo.create(photo)
+  //await Photo.updateById(1, {title:'trol'})
 }
 
 server.listen(3000, () => {
