@@ -33,6 +33,19 @@ export class Photo implements PhotoSchema {
     const photo = new Photo(data);
     return photo
   }
+
+  static async find(args: object) {
+    let chaine: string = 'photos?'
+    Object.keys(args).forEach(function (element: string)
+    {
+      chaine += `${element}=${args[element]}&`
+    })
+    chaine = chaine.substr(0, chaine.length-1);
+    console.log(chaine)
+    const { data } = await api.get<PhotoSchema>(chaine)
+    const photo = new Photo(data)
+    return  photo
+  }
 }
 
 export default Photo

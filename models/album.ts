@@ -53,6 +53,19 @@ export class Album implements AlbumSchema {
   toString() {
     return JSON.stringify(this)
   }
+
+  static async find(args: object) {
+    let chaine: string = 'albums?'
+    Object.keys(args).forEach(function (element: string)
+    {
+      chaine += `${element}=${args[element]}&`
+    })
+    chaine = chaine.substr(0, chaine.length-1);
+    console.log(chaine)
+    const { data } = await api.get<AlbumSchema>(chaine)
+    const album = new Album(data)
+    return  album
+  }
 }
 
 export default Album

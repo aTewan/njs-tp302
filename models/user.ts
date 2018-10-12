@@ -39,7 +39,7 @@ export class User implements UserSchema{
   }
 
   static async create(user : User) {
-    await api.post<User>('users/',{user})
+    await api.post<User>('users/', user)
   }
 
   static async deleteById(userId: number) {
@@ -50,6 +50,19 @@ export class User implements UserSchema{
     const { data } = await api.get<UserSchema>(`users/${userId}`)
     const user = new User(data);
     return user
+  }
+
+  static async find(args: object) {
+    let chaine: string = 'users?'
+    Object.keys(args).forEach(function (element: string)
+    {
+      chaine += `${element}=${args[element]}&`
+    })
+    chaine = chaine.substr(0, chaine.length-1);
+    console.log(chaine)
+    const { data } = await api.get<UserSchema>(chaine)
+    const user = new User(data)
+    return  user
   }
 }
 

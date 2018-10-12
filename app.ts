@@ -14,16 +14,13 @@ server.use(router)
 
 
 async function run() {
-  //const album = await Album.findById(1)
-  //console.log(album)
-  //debugger
-  let user: User = new User({id:1,name:"Adrien",username:"Adrilol",email:"adrilol@lol.fr",
+  /*let user: User = new User({id:2,name:"Adrien",username:"lol",email:"adrilol@lol.fr",
       address: {street:"lol", suite: "lol", city: "Bdx", zipcode: "33000", geo: { lat: 0, lng: 0 }},
       phone: "06070809lol", website: "www.lol.fr",
       company: { name: "aCorporate", catchPhrase: "on est pas corporate nous ???", bs: "bs?" }})
-  await User.create(user)
-  let userById = await User.findById(1);
-  console.log(userById)
+  await User.create(user)*/
+  //let album = new Album({userId:2, id:2, title:"Titi"})
+  console.log(await Album.findByFilter({title:'titi'}))
 }
 
 server.listen(3000, () => {

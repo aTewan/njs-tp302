@@ -1,31 +1,72 @@
 {
-  "albums": [],
-  "users": [
+  "albums": [
     {
-      "user": {
+      "album": {
+        "user": null,
+        "photos": [],
+        "userId": 1,
         "id": 1,
-        "name": "Adrien",
-        "username": "Adrilol",
-        "email": "adrilol@lol.fr",
-        "address": {
-          "street": "lol",
-          "suite": "lol",
-          "city": "Bdx",
-          "zipcode": "33000",
-          "geo": {
-            "lat": 0,
-            "lng": 0
-          }
-        },
-        "phone": "06070809lol",
-        "website": "www.lol.fr",
-        "company": {
-          "name": "aCorporate",
-          "catchPhrase": "on est pas corporate nous ???",
-          "bs": "Team bs"
-        }
+        "title": "Tata"
       },
       "id": 1
+    },
+    {
+      "album": {
+        "user": null,
+        "photos": [],
+        "userId": 2,
+        "id": 2,
+        "title": "Titi"
+      },
+      "id": 2
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Antoine",
+      "username": "toto",
+      "email": "adrilol@lol.fr",
+      "address": {
+        "street": "lol",
+        "suite": "lol",
+        "city": "Bdx",
+        "zipcode": "33000",
+        "geo": {
+          "lat": 0,
+          "lng": 0
+        }
+      },
+      "phone": "06070809lol",
+      "website": "www.lol.fr",
+      "company": {
+        "name": "aCorporate",
+        "catchPhrase": "on est pas corporate nous ???",
+        "bs": "bs?"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Adrien",
+      "username": "lol",
+      "email": "adrilol@lol.fr",
+      "address": {
+        "street": "lol",
+        "suite": "lol",
+        "city": "Bdx",
+        "zipcode": "33000",
+        "geo": {
+          "lat": 0,
+          "lng": 0
+        }
+      },
+      "phone": "06070809lol",
+      "website": "www.lol.fr",
+      "company": {
+        "name": "aCorporate",
+        "catchPhrase": "on est pas corporate nous ???",
+        "bs": "bs?"
+      }
     }
   ],
   "photos": []
