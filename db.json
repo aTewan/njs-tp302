@@ -1,0 +1,32 @@
+{
+  "albums": [],
+  "users": [
+    {
+      "user": {
+        "id": 1,
+        "name": "Adrien",
+        "username": "Adrilol",
+        "email": "adrilol@lol.fr",
+        "address": {
+          "street": "lol",
+          "suite": "lol",
+          "city": "Bdx",
+          "zipcode": "33000",
+          "geo": {
+            "lat": 0,
+            "lng": 0
+          }
+        },
+        "phone": "06070809lol",
+        "website": "www.lol.fr",
+        "company": {
+          "name": "aCorporate",
+          "catchPhrase": "on est pas corporate nous ???",
+          "bs": "bs?"
+        }
+      },
+      "id": 1
+    }
+  ],
+  "photos": []
+}
